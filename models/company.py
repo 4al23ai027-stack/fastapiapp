@@ -1,19 +1,16 @@
-from sqlalchemy import Column, Integer, String,Enum,relationship
-
-from database import Base,engine,SessionLocal
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.orm import relationship
+from database import Base
 
 class Company(Base):
     __tablename__ = 'companies'
 
     id = Column(Integer, primary_key=True, index=True)
-    name = Column(String,index=True, nullable=False)
+    name = Column(String, index=True, nullable=False)
     email = Column(String, unique=True)
     phone = Column(String, unique=True)
 
     jobs = relationship("Job", back_populates="company")
 
     def __repr__(self):
-        return f"<Company(name={self.name}, industry={self.industry}, size={self.size}, location={self.location})>"
-
-    @router .post("/")
-    def create_    
+        return f"<Company(id={self.id}, name={self.name}, email={self.email}, phone={self.phone}))>"

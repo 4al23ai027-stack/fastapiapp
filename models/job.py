@@ -1,8 +1,6 @@
-from sqlalchemy import Column, Integer, String, Enum, ForeignKey
-from models.company import Company
-from sqlalchemy.orm import declarative_base
-
-Base = declarative_base()
+from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy.orm import relationship
+from database import Base
 
 class Job(Base):
     __tablename__ = 'jobs'
@@ -10,6 +8,11 @@ class Job(Base):
     id = Column(Integer, primary_key=True, index=True)
     title = Column(String, nullable=False)
     description = Column(String)
-    salary= Column(Integer)
+    salary = Column(Integer)
     company_id = Column(Integer, ForeignKey('companies.id'))
+
+    company = relationship("Company", back_populates="jobs")
+
+    def __repr__(self):
+        return f"<Job(id={self.id}, title={self.title}, salary={self.salary}, company_id={self.company_id})>"
 
