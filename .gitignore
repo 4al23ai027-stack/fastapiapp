@@ -1,2 +1,9 @@
 *.pyc
 env
+node_modules/
+frontend/node_modules/
+frontend/dist/
+dist/
+.env
+.env.local
+.DS_Store

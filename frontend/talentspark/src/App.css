@@ -182,3 +182,30 @@
     border-right-color: var(--border);
   }
 }
+
+.big-count {
+  font-size: 56px;
+  color: var(--text-h);
+  margin: 8px 0 12px;
+}
+
+.increment-button {
+  background: var(--border);
+  color: var(--text-h);
+  border: 1px solid rgba(0,0,0,0.2);
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Center job and company display */
+.job-title {
+  font-size: 24px;
+  margin-top: 18px;
+  color: var(--text-h);
+}
+
+.company-details {
+  margin-top: 8px;
+  color: var(--text);
+}

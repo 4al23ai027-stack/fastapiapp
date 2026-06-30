@@ -1,0 +1,26 @@
+{
+  "name": "fastapiapp",
+  "version": "1.0.0",
+  "description": "A complete FastAPI application for managing job listings and companies with PostgreSQL database integration.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cd frontend/talentspark && npm run dev",
+    "build": "cd frontend/talentspark && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4al23ai027-stack/fastapiapp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/4al23ai027-stack/fastapiapp/issues"
+  },
+  "homepage": "https://github.com/4al23ai027-stack/fastapiapp#readme",
+  "dependencies": {
+    "axios": "^1.18.1"
+  }
+}

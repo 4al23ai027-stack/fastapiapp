@@ -1,16 +1,19 @@
-import {useState} from "react";
+import { useState } from "react";
 
-function Counter() {
+function Welcome() {
     const [count, setCount] = useState(0);
-    const increment = () => {
-        setCount(count + 1);
-    }
+
     return (
-        <div>
-            <h1>Count: {count}</h1>
-            <button onClick={increment}>Increment</button>
+        <div style={{ textAlign: "center" }}>
+            <h1 className="big-count">Count:{count}</h1>
+            <button
+                className="increment-button"
+                onClick={() => setCount((c) => c + 1)}
+            >
+                Increment
+            </button>
         </div>
-    )
+    );
 }
 
-export default Counter;
+export default Welcome;

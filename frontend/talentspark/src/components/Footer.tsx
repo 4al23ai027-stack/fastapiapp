@@ -1,8 +1,8 @@
-function Fppter() {
-    return(
+function Footer() {
+    return (
         <footer>
-            <p>All rights reserved by Talentspark.</p>
+            <p>© 2023 TalentSpark. All rights reserved.</p>
         </footer>
-    )
+    );
 }
 export default Footer;
