@@ -20,5 +20,5 @@
 *.pdf binary
 
 # Keep node_modules as-is (we will ignore it)
-frontend/node_modules/* -text
-node_modules/* -text
+frontend/node_modules/** -text
+node_modules/** -text

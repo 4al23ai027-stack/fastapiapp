@@ -11,7 +11,8 @@ def create_company(company: CompanyCreate, db: Session = Depends(get_db)):
     db_company = Company(
         name=company.name,
         email=company.email,
-        phone=company.phone
+        phone=company.phone,
+        location=company.location,
     )
     db.add(db_company)
     db.commit()
