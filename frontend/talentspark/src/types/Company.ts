@@ -1,13 +1,13 @@
-import type { job } from './job';
+import type { Job } from "./job";
 
-interface company {
+interface Company {
   id: number;
   name: string;
   email: string;
   phone: string;
   address: string;
   location: string;
-  jobs: job[];
+  jobs: Job[];
 }
 
-export type { company };
+export type { Company }

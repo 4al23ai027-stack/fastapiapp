@@ -1,7 +1,7 @@
-import type { job } from "../types/job";
+import type { Job } from "../types/job";
 
 type Props = {
-  jobs: job[];
+  jobs: Job[];
 };
 
 function JobCart({ jobs }: Props) {

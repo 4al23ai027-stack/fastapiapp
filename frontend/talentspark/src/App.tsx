@@ -6,10 +6,10 @@ import JobCart from "./components/jobCart";
 import { useEffect, useState } from "react";
 import { getCompanies } from "./Services/CompanyServices";
 import { getJobs } from "./Services/JobServices";
-import type { company } from "./types/Company";
-import type { job } from "./types/job";
+import type { Company } from "./types/Company";
+import type { Job } from "./types/job";
 
-const fallbackCompanies: company[] = [
+const fallbackCompanies: Company[] = [
   {
     id: 1,
     name: "Google",
@@ -30,7 +30,7 @@ const fallbackCompanies: company[] = [
   },
 ];
 
-const fallbackJobs: job[] = [
+const fallbackJobs: Job[] = [
   {
     id: 1,
     title: "Frontend Developer",
@@ -50,8 +50,8 @@ const fallbackJobs: job[] = [
 function App() {
   const [loading, setLoading] = useState(true);
   const [offline, setOffline] = useState(false);
-  const [companies, setCompanies] = useState<company[]>([]);
-  const [jobs, setJobs] = useState<job[]>([]);
+  const [companies, setCompanies] = useState<Company[]>([]);
+  const [jobs, setJobs] = useState<Job[]>([]);
 
   async function fetchCompanies() {
     try {
@@ -99,7 +99,12 @@ function App() {
           </div>
         )}
         <JobCart jobs={jobs} />
-        <CompanyCard companies={companies} />
+        <CompanyCard
+          companies={companies}
+          onedit={() => {}}
+          ondelete={() => {}}
+          onadd={() => {}}
+        />
       </div>
       <Footer />
     </>
